@@ -1,0 +1,32 @@
+@use '/src/styles/breakpoints.scss' as bp;
+
+:host {
+    .header-section {
+        align-items: center;
+        padding: 2rem 3vw;
+        justify-content: space-between;
+
+        .logo-section {
+            align-items: center;
+
+            .logo {
+                font-size: 3.2rem;
+                height: 3.2rem;
+                width: 3.2rem;
+            }
+        }
+
+        .help-section {
+            .help-item {
+                padding: 1rem 2rem;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+
+                &.call-item:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+

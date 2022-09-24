@@ -1,0 +1,69 @@
+@use '@angular/material' as mat;
+@use 'styles/typography.scss';
+@use 'styles/utils.scss';
+@use 'styles/breakpoints.scss' as bp;
+@include mat.core();
+$you-go-travel-primary: mat.define-palette(mat.$cyan-palette);
+$you-go-travel-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$you-go-travel-warn: mat.define-palette(mat.$red-palette);
+$you-go-travel-theme: mat.define-light-theme((
+  color: (
+    primary: $you-go-travel-primary,
+    accent: $you-go-travel-accent,
+    warn: $you-go-travel-warn,
+  )
+));
+@include mat.all-component-themes($you-go-travel-theme);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 58%;
+    height: 100%; 
+}
+
+mat-icon {
+  font-size: 2.6rem !important;
+  height: 2.6rem !important;
+  width: 2.6rem !important;
+}
+
+@media (max-width: bp.$medium-desktop) {
+  html {
+      font-size: 54%;
+  }
+}
+
+@media (max-width: bp.$small-desktop) {
+  html {
+      font-size: 47%;
+  }
+}
+
+@media (max-width: bp.$medium-tablet) {
+  html {
+      font-size: 40%;
+  }
+}
+
+@media (max-width: bp.$small-tablet) {
+  html {
+      font-size: 44%;
+  }
+}
+
+@media (max-width: bp.$medium-phone) {
+  html {
+      font-size: 50%;
+  }
+}
+
+@media (max-width: bp.$small-phone) {
+  html {
+      font-size: 42%;
+  }
+}

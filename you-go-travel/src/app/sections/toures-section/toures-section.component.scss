@@ -1,0 +1,87 @@
+@use '/src/styles/theme.scss' as theme;
+@use '/src/styles/breakpoints.scss' as bp;
+
+app-toures-section {
+    .toures-section {
+        padding: 6rem 11vw;
+
+        .features-list {
+            margin-top: 4%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6%;
+
+            .feature {
+                min-height: 48rem;
+
+                .content {
+                    height: 100%;
+
+                    .image {
+                        border-radius: 2px;
+                        max-width: 100%;
+                    }
+
+                    .button-content {
+                        padding: 0.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: bp.$small-tablet) {
+        .toures-section {
+            padding: 6rem 14vw;
+
+            .features-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2%;
+
+                app-feature:last-child {
+                    grid-column: span 2;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .feature {
+                    width: 34vw;
+                }
+            }
+        }
+    }
+
+    @media (max-width: bp.$medium-phone) {
+        .toures-section {
+            padding: 6rem 14vw;
+
+            .features-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                app-feature {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .feature {
+                    width: 50vw;
+                }
+            }
+        }
+    }
+
+    @media (max-width: bp.$small-phone) {
+        .toures-section {
+            padding: 6rem 6vw;
+
+            .features-list {
+                .feature {
+                    width: 80vw;
+                }
+            }
+        }
+    }
+}

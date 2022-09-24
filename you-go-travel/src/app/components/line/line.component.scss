@@ -1,0 +1,15 @@
+:host {
+    .line {
+        &.line-small {
+            height: 0.3rem;
+        }
+
+        &.line-default {
+            height: 2rem;
+        }
+
+        &.line-big {
+            height: 3rem;
+        }
+    }
+}

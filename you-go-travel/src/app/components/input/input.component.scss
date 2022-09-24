@@ -1,0 +1,17 @@
+@use '/src/styles/theme.scss' as theme;
+
+:host {
+    display: block;
+
+    input {
+        border: none;
+        outline: none;
+        border-bottom: solid 1px theme.$secondary-color;
+
+        &:hover &:focus,
+        &:focus-visible,
+        &:active {
+            border-bottom: solid 1px theme.$primary-color;
+        }
+    }
+}

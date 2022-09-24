@@ -1,0 +1,55 @@
+@use '/src/styles/breakpoints.scss' as bp;
+
+:host {
+    .testimonial-section {
+        padding: 6rem 0rem;
+
+        .quote {
+            margin-bottom: auto;
+            margin-top: auto;
+            padding: 6rem 0rem;
+            max-width: 60rem;
+            text-align: left;
+            border-radius: 4px;
+
+            .subqoute {
+                padding: 6rem 2rem;
+            }
+        }
+
+        img {
+            height: 60rem;
+            border-radius: 4px;
+        }
+    }
+
+    @media (max-width: bp.$medium-phone) {
+        .testimonial-section {
+            flex-direction: column;
+            padding: 6rem 6vw;
+
+            img {
+                max-width: 50%;
+                align-self: center;
+            }
+
+            .quote {
+                max-width: 100%;
+            }
+        }
+    }
+
+    
+    @media (max-width: bp.$small-phone) {
+        .testimonial-section {
+            img {
+                max-width: 100%;
+                align-self: center;
+            }
+
+            .quote {
+                max-width: 100%;
+            }
+        }
+    }
+}

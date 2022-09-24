@@ -1,0 +1,41 @@
+@use '/src/styles/breakpoints.scss' as bp;
+
+app-features-section {
+    .features-section {
+        padding: 6vw 10vw;
+        background-image: url("/assets/img/features/background.jpg");
+        background-size: 100% 100%;
+
+        .features-list {
+            margin-top: 4%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8%
+        }
+    }
+
+    @media (max-width: 100em) {
+        .features-section {
+            .features-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    @media (max-width: bp.$medium-phone) {
+        .features-section {
+            .features-list {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: bp.$medium-phone) {
+    .features-list {
+        app-feature .feature {
+            margin: 2vw;
+        }
+    }
+}

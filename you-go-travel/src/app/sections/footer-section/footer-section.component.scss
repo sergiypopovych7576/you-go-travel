@@ -1,0 +1,33 @@
+@use '/src/styles/breakpoints.scss' as bp;
+:host {
+    .feature-section {
+        padding: 4rem 6vw;
+
+        .cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14%;
+
+            .list {
+                p {
+                    margin-bottom: 0.8rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: bp.$small-phone) {
+        .feature-section {
+            .cols {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .list {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@use '/src/styles/breakpoints.scss' as bp;
+
+app-contact-section {
+    .contact-section {
+        padding: 6% 8%;
+        background-image: url("/assets/img/contact/contact.jpg");
+        background-size: 100% 100%;
+
+        .content {
+            min-height: 50rem;
+
+            .description {
+                padding: 0rem 4vw;
+            }
+
+            .contact {
+                padding: 6vw 2vw;
+            }
+
+            .form {
+                margin-top: 3rem;
+                width: 40%;
+
+                .call {
+                    margin-top: 6rem;
+                    min-height: 6rem;
+
+                    .call-button {
+                        min-height: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: bp.$medium-phone) {
+    app-contact-section {
+        .contact-section {
+            .text {
+                text-align: center;
+            }
+
+            .description {
+                text-align: justify;
+            }
+
+            .content {
+                .form {
+                    width: 80%;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: bp.$small-phone) {
+    app-contact-section {
+        .contact-section {
+            .content {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .description {
+                    padding: 1vw 9vw 6vw 9vw;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

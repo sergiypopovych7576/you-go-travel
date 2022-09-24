@@ -1,0 +1,12 @@
+:host {
+    .companies-section {
+        padding: 3rem 5rem;
+        justify-content: space-around;
+
+        .item {
+            img {
+                max-height: 2.6vw;
+            }
+        }
+    }
+}
