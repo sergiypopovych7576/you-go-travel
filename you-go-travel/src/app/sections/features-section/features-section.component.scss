@@ -4,7 +4,7 @@ app-features-section {
     .features-section {
         padding: 6vw 10vw;
         background-image: url("/assets/img/features/background.jpg");
-        background-size: 100% 100%;
+        background-size: 100% 150%;
 
         .features-list {
             margin-top: 4%;
@@ -24,6 +24,8 @@ app-features-section {
 
     @media (max-width: bp.$medium-phone) {
         .features-section {
+            background-size: 100% 100%;
+
             .features-list {
                 display: flex;
                 flex-direction: column;

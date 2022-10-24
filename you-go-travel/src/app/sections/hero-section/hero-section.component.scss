@@ -1,4 +1,5 @@
 @use '/src/styles/breakpoints.scss' as bp;
+@use '/src/styles/animations.scss';
 
 :host {
     .hero-section {
@@ -9,12 +10,15 @@
         overflow-x: hidden;
 
         .text-section {
+            animation: moveInLeft 700ms ease-out;
+
             p {
                 line-height: 1.4;
             }
         }
 
         .image-section {
+            animation: moveInRight 700ms ease-out;
             position: relative;
             padding-bottom: 8rem;
             left: 9vw;
