@@ -3,7 +3,7 @@
         <h2>Why you should choose us</h2>
     </div>
     <div class="features-list">
-        <app-feature *ngFor="let feature of features" [icon]="feature.icon">
+        <app-feature *ngFor="let feature of features" [icon]="feature.icon" [focusable]="true">
             <ng-container header>
                 {{ feature.title }}
             </ng-container>

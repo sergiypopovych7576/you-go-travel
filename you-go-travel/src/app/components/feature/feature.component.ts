@@ -8,5 +8,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 })
 export class FeatureComponent {
   @Input()
-  public icon: string = '';
+  public icon = '';
+
+  @Input()
+  public focusable = false
 }

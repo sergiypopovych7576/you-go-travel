@@ -1,9 +1,13 @@
+@use '/src/styles/animations.scss';
+@use '/src/styles/theme.scss' as theme;
+
 app-feature {
     .feature {
         width: 100%;
         border-radius: 4px;
         padding: 1.5rem 2.6rem;
-
+        transition: outline 100ms;
+        
         .icon {
             border-radius: 50%;
             padding: 0.5rem;
@@ -16,6 +20,12 @@ app-feature {
                 font-size: 1.6rem;
                 line-height: 1.2;
             }
+        }
+    }
+    
+    .focusable {
+        &:hover {
+            outline: solid .4rem theme.$primary-color;
         }
     }
 }
