@@ -12,17 +12,23 @@ export class TouresSectionComponent {
     {
       title: 'First',
       img: '/assets/img/toures/dust.jpg',
-      body: LOREM_IPSUM_SHORT
+      body: LOREM_IPSUM_SHORT,
+      sale: 10,
+      saleIcon: 'local_offer'
     },
     {
       title: 'Second',
       img: '/assets/img/toures/bridge.jpg',
-      body: LOREM_IPSUM_SHORT
+      body: LOREM_IPSUM_SHORT,
+      sale: 15,
+      saleIcon: 'local_offer'
     },
     {
       title: 'Third',
       img: '/assets/img/toures/sea.jpg',
-      body: LOREM_IPSUM_SHORT
+      body: LOREM_IPSUM_SHORT,
+      sale: 20,
+      saleIcon: 'discount'
     },
   ]
 }

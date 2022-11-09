@@ -29,3 +29,32 @@
         transform: translate(0);
     }
 }
+
+@keyframes shake {
+    0% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(-8deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
+@keyframes shakeHard {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}

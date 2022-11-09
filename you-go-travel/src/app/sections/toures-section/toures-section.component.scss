@@ -11,15 +11,75 @@ app-toures-section {
             grid-template-columns: repeat(3, 1fr);
             gap: 6%;
 
+            .primary-offer {
+                border: solid .4rem theme.$primary-color;
+                border-radius: .8rem;
+            }
+
             .feature {
                 min-height: 48rem;
-
                 .content {
                     height: 100%;
 
-                    .image {
-                        border-radius: 2px;
-                        max-width: 100%;
+                    .sale-image-container {
+                        position: relative;
+                    }
+
+                    .image-container {
+                        .image {
+                            border-radius: 2px;
+                            max-width: 100%;
+                            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+                            transition: filter 200ms;
+                        }
+
+                        .subtitle {
+                            position: absolute;
+                            right: 30%;
+                            bottom: 55%;
+                            font-weight: bold;
+                            opacity: 0;
+                            transition: opacity 200ms;
+                        }
+
+                        &:hover {
+                            .image {
+                                filter: blur(.3rem);
+                            }
+
+                            .subtitle {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .sale {
+                        position: absolute;
+                        right: 4%;
+                        bottom: 0;
+                        border-radius: 2rem;
+                        padding: .8% 3%;
+                        border: solid 1px theme.$secondary-color;
+                        background-color: theme.get-light-color(theme.$secondary-color, 10);
+
+                        &:hover {
+                            animation: shake 180ms linear;
+                        }
+                    }
+
+                    .sale-primary {
+                        border: solid 1px theme.$primary-color;
+                        background-color: theme.get-light-color(theme.$primary-color, 10);
+
+                        &:hover {
+                            animation: shakeHard 180ms linear;
+                        }
+                    }
+
+                    .sale-icon {
+                        width: 1.8rem !important;
+                        height: 1.8rem !important;
+                        font-size: 1.8rem !important;
                     }
 
                     .button-content {
